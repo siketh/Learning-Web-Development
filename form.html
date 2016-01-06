@@ -1,6 +1,36 @@
 <form action="" method="post">
-	<input type="text" name="name"/><br>
-	<input type="text" name="name"/><br>
-	<input type="text" name="name"/><br>
-	<input type="submit" name="name" value="submit"/>
+	<input type="text" name="name" placeholder="Enter your name"/><br>
+	<input type="text" name="email" placeholder="Enter your email"/><br>
+	<input type="text" name="pass" placeholder="Enter your pass"/><br>
+	<input type="submit" name="sub" value="Submit"/>
 </form>
+
+<?php
+	
+	/*
+	if(isset($_POST['sub']))
+	{
+		// $_POST method is the way in which data goes to the server in the background, hidden from user
+		$name = $_POST['name'];
+		$email = $_POST['email'];
+		$pass = $_POST['pass'];
+
+		echo "<b>Your Name is: " . $name . "</br>";
+		echo "<b>Your Email is: " . $email . "</br>";
+		echo "<b>Your Password is: " . $pass . "</br>";
+	}
+	*/
+	
+	if(isset($_GET['sub']))
+	{
+		// $_GET method is the way in which data goes to the server in the background, visible to the user
+		$name = $_GET['name'];
+		$email = $_GET['email'];
+		$pass = $_GET['pass'];
+
+		echo "<b>Your Name is: " . $name . "</br>";
+		echo "<b>Your Email is: " . $email . "</br>";
+		echo "<b>Your Password is: " . $pass . "</br>";
+	}
+
+?>
